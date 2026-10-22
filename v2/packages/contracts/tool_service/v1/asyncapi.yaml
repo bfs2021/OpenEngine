@@ -413,11 +413,20 @@ components:
       headers:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: '../../common/v1/event.schema.json#/$defs/headers' }
+    commandHeaders:
+      headers:
+        schemaFormat: application/schema+json;version=draft-07
+        schema: { $ref: '../../common/v1/command.schema.json#/$defs/headers' }
+    queryHeaders:
+      headers:
+        schemaFormat: application/schema+json;version=draft-07
+        schema: { $ref: '../../common/v1/query.schema.json#/$defs/headers' }
 
   messages:
     ApplyToolCommand:
       name: ApplyToolCommand
       title: Apply a tool command
+      traits: [{ $ref: '#/components/messageTraits/commandHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/commands.schema.json#/$defs/apply_tool_command' }
@@ -438,6 +447,7 @@ components:
     DeleteToolCommand:
       name: DeleteToolCommand
       title: Delete a tool command
+      traits: [{ $ref: '#/components/messageTraits/commandHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/commands.schema.json#/$defs/delete_tool_command' }
@@ -456,6 +466,7 @@ components:
     InvokeToolCommand:
       name: InvokeToolCommand
       title: Invoke a tool command
+      traits: [{ $ref: '#/components/messageTraits/commandHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/commands.schema.json#/$defs/invoke_tool_command' }
@@ -476,6 +487,7 @@ components:
     ApplyToolGrantCommand:
       name: ApplyToolGrantCommand
       title: Apply a tool grant command
+      traits: [{ $ref: '#/components/messageTraits/commandHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/commands.schema.json#/$defs/apply_tool_grant_command' }
@@ -494,6 +506,7 @@ components:
     DeleteToolGrantCommand:
       name: DeleteToolGrantCommand
       title: Revoke a tool grant command
+      traits: [{ $ref: '#/components/messageTraits/commandHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/commands.schema.json#/$defs/delete_tool_grant_command' }
@@ -512,6 +525,7 @@ components:
     CancelToolInvocationCommand:
       name: CancelToolInvocationCommand
       title: Cancel a tool invocation command
+      traits: [{ $ref: '#/components/messageTraits/commandHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/commands.schema.json#/$defs/cancel_tool_invocation_command' }
@@ -530,6 +544,7 @@ components:
     GetToolQuery:
       name: GetToolQuery
       title: Get a tool query
+      traits: [{ $ref: '#/components/messageTraits/queryHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/queries.schema.json#/$defs/get_tool_query' }
@@ -548,6 +563,7 @@ components:
     ListToolsQuery:
       name: ListToolsQuery
       title: List tools query
+      traits: [{ $ref: '#/components/messageTraits/queryHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/queries.schema.json#/$defs/list_tools_query' }
@@ -566,6 +582,7 @@ components:
     GetToolGrantQuery:
       name: GetToolGrantQuery
       title: Get a tool grant query
+      traits: [{ $ref: '#/components/messageTraits/queryHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/queries.schema.json#/$defs/get_tool_grant_query' }
@@ -584,6 +601,7 @@ components:
     ListToolGrantsQuery:
       name: ListToolGrantsQuery
       title: List tool grants query
+      traits: [{ $ref: '#/components/messageTraits/queryHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/queries.schema.json#/$defs/list_tool_grants_query' }
@@ -602,6 +620,7 @@ components:
     GetToolInvocationQuery:
       name: GetToolInvocationQuery
       title: Get a tool invocation query
+      traits: [{ $ref: '#/components/messageTraits/queryHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/queries.schema.json#/$defs/get_tool_invocation_query' }
@@ -620,6 +639,7 @@ components:
     ListToolInvocationsQuery:
       name: ListToolInvocationsQuery
       title: List tool invocations query
+      traits: [{ $ref: '#/components/messageTraits/queryHeaders' }]
       payload:
         schemaFormat: application/schema+json;version=draft-07
         schema: { $ref: './schemas/queries.schema.json#/$defs/list_tool_invocations_query' }
