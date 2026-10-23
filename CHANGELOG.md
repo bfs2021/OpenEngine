@@ -9,6 +9,27 @@
   still load with deprecation warnings and will be removed in the next release.
   Legacy string checkout paths remain accepted silently.
 
+## [1.11.0](https://github.com/OpenEngine/OpenEngine/compare/v1.10.0...v1.11.0) (2026-10-23)
+
+
+### Features
+
+* **contracts:** tool service contract, and apply resources across services ([#1013](https://github.com/OpenEngine/OpenEngine/issues/1013)) ([96b0ff1](https://github.com/OpenEngine/OpenEngine/commit/96b0ff1d27129e33e7bf282a2d621d4f8c0b828f))
+* **graph:** make tdd-guide's reranker runner an input ([#1107](https://github.com/OpenEngine/OpenEngine/issues/1107)) ([ce5f77a](https://github.com/OpenEngine/OpenEngine/commit/ce5f77af07a89bbfdd53b086d8ea3309703eeb13))
+* **graph:** wake the ci step from GitHub CI webhooks instead of polling ([#1031](https://github.com/OpenEngine/OpenEngine/issues/1031)) ([2d3c553](https://github.com/OpenEngine/OpenEngine/commit/2d3c553c12aa00d8d004ec5f984dbcdf7564aaf9))
+* **v2:** shared logging and tracing for every service ([#1108](https://github.com/OpenEngine/OpenEngine/issues/1108)) ([806a86a](https://github.com/OpenEngine/OpenEngine/commit/806a86a7d587839b7091a99a9b39103fc5626610))
+
+
+### Bug Fixes
+
+* make starter runs work with a single usable coding agent ([#1029](https://github.com/OpenEngine/OpenEngine/issues/1029)) ([d192b56](https://github.com/OpenEngine/OpenEngine/commit/d192b56d3d5a9e5926b4232f383e1ca5870008d8))
+* **site:** use oe command in landing page install snippet and hero image ([#1109](https://github.com/OpenEngine/OpenEngine/issues/1109)) ([f3915eb](https://github.com/OpenEngine/OpenEngine/commit/f3915ebfeb7b0a611cd9d628cc48ece3a2ef3495))
+
+
+### Documentation
+
+* restore README examples and use `oe` in the blog, quickstart and specs ([#1026](https://github.com/OpenEngine/OpenEngine/issues/1026)) ([fe7218b](https://github.com/OpenEngine/OpenEngine/commit/fe7218b9cc21d8afa6bd3f41d390279459a8f00b))
+
 ## [1.10.0](https://github.com/OpenEngine/OpenEngine/compare/v1.9.1...v1.10.0) (2026-10-22)
 
 
